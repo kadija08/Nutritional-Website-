@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Computer Hardware Website: GPU Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="main">
+        <div id="header">
+            <h1>RestYourMind</h1>
+
+        <div id="social">
+            <a href="https://www.facebook.com">
+                <img src="images/facebook.jpg" alt="facebook">
+            </a>
+            <a href="https://www.x.com">
+                <img src="images/x.jpg" alt="x/twitter">
+            </a>
+            <a href="https://www.linkedin.com">
+                <img src="images/linkedin.jpg" alt="linkedin">
+            </a>
+        </div>
+        </div>
+
+        <div id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Healthyeating.html">Healthy Eating</a></li>
+                <li><a href="Sleepinghabits.html">Sleeping Habits</a></li>
+                <li><a class="active" href="Gallery.html">Gallery</a></li>
+                <li><a href="Exercise.html">Exercise</a></li>
+                <li><a href="CONTACT.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="images/Gallery1.jpg" style="width:50%">
+              <div class="text">Explore our collection of images showcasing the journey to a healthier lifestyle. From nutritious meals and fun workouts to relaxing sleep routines and community events, these moments capture the essence of a balanced living.</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="images/Gallery2.jpg" style="width:50%">
+              <div class="text">At the center, you'll find a reminder of the importance of hydration, represented by a glass of water and milk. surrounding it are various food categories, including whole grains, proteins, dairy, fruits, and vegetables, each depicted with vibrant images of fresh produce, bread, nuts, and other wholesome foods. This chart serves as a simple guide to making healthy choices, ensuring you get a well-rounded diet filled with essential nutrients. Whether you're meal planning or looking for inspiration to eat healthier, this food wheel is here to help!.</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="images/Gallery33.jpg" style="width:50%">
+              <div class="text">At the base, labeled "EAST MOST,"you'll find essential staples like cereals, breads, vegetables, and fruits--foods rich in fiber, vitamins, and minerals that should form the foundation of your diet. Moving up, the "EAT MODERATELY" section includes dairy products like yogurt, milk, and cheese, along with lean meats, legumes, poultry, fish, nuts, and eggs. these provide necessary proteins and fats but should be eaten in controlled portions. At the top, the "EAT LEAST" section features sugar, butter, margarine, and oils. These should be consumed sparingly to maintain a healty lifestyle.</div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)"></a> 
+
+            <a class="next" onclick="plusSlides(1)"></a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+            
+            <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+
+        <div id="footer">
+            <a href="Home.html">Home</a>  |  <a href="Healthy Eating.html">Healthy Eating</a>  |  <a href="Sleeping Habits.html">Sleeping Habits</a>  |  <a href="Gallery.html">Gallery</a>  |  <a href="Exercise.html">Exercise</a>  |  <a href="contact.html">Contact Us</a>
+        </div>
+    </div>
+</body>
+
+
+
+
+</html>
